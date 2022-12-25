@@ -6,7 +6,9 @@
   "root": "apps/kyahaal-backend",
   "compilerOptions": {
     "webpack": true,
-    "tsConfigPath": "apps/kyahaal-backend/tsconfig.app.json"
+    "tsConfigPath": "apps/kyahaal-backend/tsconfig.app.json",
+    "assets": ["**/*.proto"],
+    "watchAssets": true
   },
   "projects": {
     "kyahaal-backend": {

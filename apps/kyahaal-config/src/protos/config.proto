@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package config;
+
+service Config {
+    rpc GetMobileAppConfig (Request) returns (Response);
+}
+
+message Request {}
+
+message Response {
+    AuthenticationForm form = 1;
+}
+
+message AuthenticationForm {
+    AuthenticationFormData login = 1;
+    AuthenticationFormData signup = 2;
+}
+
+message AuthenticationFormData {
+    string title = 1;
+    optional string subtitle = 2;
+    optional string subtitleCTAText = 3;
+    optional string subtitleCTATLink = 4;
+    optional string primaryCTAText = 5;
+    optional string secondaryCTAText = 6;
+    repeated AuthenticationField fields = 7;
+    FormSubmissionMeta formSubmissionMeta = 8;
+}
+
+message AuthenticationField {
+    string inputType = 1;
+    optional string label = 2;
+    optional bool autofocus = 3;
+    optional bool bottomGutter = 4;
+    FormValidator validator = 5;
+    string identifier = 6;
+}
+
+message FormValidator {
+    FormValidatorType validatorType = 1;
+    repeated RegexValidator regExp = 2;
+}
+
+message RegexValidator {
+    string regExp = 1;
+    string error = 2;
+}
+
+message FormSubmissionMeta {
+    enum Method { POST = 0; PATCH = 1;}
+    string url = 1;
+    Method method = 2;
+    optional string key = 3;
+}
+
+enum FormValidatorType{  
+    NONE = 0;
+    REGEX = 1; 
+}

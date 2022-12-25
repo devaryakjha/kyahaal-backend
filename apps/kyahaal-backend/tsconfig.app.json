@@ -4,6 +4,12 @@
     "declaration": false,
     "outDir": "../../dist/apps/kyahaal-backend"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "test", "**/*spec.ts"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "dist",
+    "test",
+    "**/*spec.ts"
+  ]
 }

@@ -4,5 +4,13 @@
   "description": "monorepo kyahaal-config",
   "main": "index.js",
   "author": "dev.jha.arya@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "proto:cp": "cp node_modules/kyahaal-proto/protos/* src/protos/",
+    "proto:config": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./node_modules/kyahaal-proto --ts_proto_out=src/config node_modules/kyahaal-proto/protos/config.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb --ts_proto_opt=unrecognizedEnum=false --ts_proto_opt=stringEnums=true --ts_proto_opt=outputEncodeMethods=false",
+    "proto:all": "yarn add -D https://github.com/devaryakjha/kyahaal-proto && yarn proto:config"
+  },
+  "devDependencies": {
+    "kyahaal-proto": "https://github.com/devaryakjha/kyahaal-proto"
+  }
 }
