@@ -1,0 +1,13 @@
+{
+  "name": "@app/kyahaal-backend",
+  "version": "0.0.1",
+  "description": "monorepo kyahaal-backend",
+  "main": "index.js",
+  "author": {
+    "email": "dev.jha.arya@gmail.com",
+    "name": "Aryakumar Jha"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

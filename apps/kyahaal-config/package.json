@@ -1,0 +1,8 @@
+{
+  "name": "@app/kyahaal-config",
+  "version": "0.0.1",
+  "description": "monorepo kyahaal-config",
+  "main": "index.js",
+  "author": "dev.jha.arya@gmail.com",
+  "license": "MIT"
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/kyahaal-backend/src",
+  "monorepo": true,
+  "root": "apps/kyahaal-backend",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/kyahaal-backend/tsconfig.app.json"
+  },
+  "projects": {
+    "kyahaal-backend": {
+      "type": "application",
+      "root": "apps/kyahaal-backend",
+      "entryFile": "main",
+      "sourceRoot": "apps/kyahaal-backend/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/kyahaal-backend/tsconfig.app.json"
+      }
+    },
+    "kyahaal-config": {
+      "type": "application",
+      "root": "apps/kyahaal-config",
+      "entryFile": "main",
+      "sourceRoot": "apps/kyahaal-config/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/kyahaal-config/tsconfig.app.json"
+      }
+    }
+  }
+}
