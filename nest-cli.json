@@ -7,7 +7,9 @@
   "compilerOptions": {
     "webpack": true,
     "tsConfigPath": "apps/kyahaal-backend/tsconfig.app.json",
-    "assets": ["**/*.proto"],
+    "assets": [
+      "**/*.proto"
+    ],
     "watchAssets": true
   },
   "projects": {
@@ -27,6 +29,15 @@
       "sourceRoot": "apps/kyahaal-config/src",
       "compilerOptions": {
         "tsConfigPath": "apps/kyahaal-config/tsconfig.app.json"
+      }
+    },
+    "kyahaal-auth": {
+      "type": "application",
+      "root": "apps/kyahaal-auth",
+      "entryFile": "main",
+      "sourceRoot": "apps/kyahaal-auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/kyahaal-auth/tsconfig.app.json"
       }
     }
   }
