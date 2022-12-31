@@ -1,0 +1,15 @@
+{
+  "name": "kyahaal-auth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "proto:cp": "cp node_modules/kyahaal-proto/protos/* src/protos/",
+    "proto:auth": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./node_modules/kyahaal-proto --ts_proto_out=src/auth/ node_modules/kyahaal-proto/protos/auth.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb --ts_proto_opt=unrecognizedEnum=false --ts_proto_opt=stringEnums=true --ts_proto_opt=outputEncodeMethods=false",
+    "proto:all": "yarn add -D https://github.com/devaryakjha/kyahaal-proto && yarn proto:auth"
+  },
+  "devDependencies": {
+    "kyahaal-proto": "https://github.com/devaryakjha/kyahaal-proto"
+  },
+  "dependencies": {}
+}
